@@ -1,4 +1,5 @@
 <template>
+  <NavbarApp/>
   <div class="container">
     <div v-if="active">
       <h1>Login</h1>
@@ -62,7 +63,7 @@
 
 <script setup>
 import { ref } from 'vue';
-
+import NavbarApp from './components/NavbarApp.vue'
 
 const active = ref(true)
 
@@ -96,8 +97,3 @@ const filterUsers =()=> {
   users.value.filter(user => user.age >= 18);
 }
 </script>
-
-
-<style>
-
-</style>
